@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Welcome to Costco</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">
+
+	</script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+
+	</script>
+	<script src="script.js">
+
+	</script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center" style="font-size:25px">
+      <!-- Brand/logo -->
+      <a class="d-flex w-50 mr-auto" href="#">
+        <img src="Costco_Logo.png" alt="logo" width="80" height="30">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <!-- Links -->
+      <div class="navbar-collapse collapse w-100" id="collapsingNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="Clothing.html">Clothing</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="Groceries.html">Groceries</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="Furniture.html">Furniture</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="Electronics.html">Electronics</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="Bulk.html">Bulk</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="Discounts.html">Discounts</a>
+          </li>
+        <!-- </ul>      -->
+        <!-- <div class="d-flex flex-md-fill flex-shrink-1 justify-content-end order-3"> -->
+          <!-- <ul class="navbar-nav"> -->
+            <li class="nav-item active">
+              <a class="nav-link" href="#login"><button class="btn btn-secondary" onClick="window.location.reload();"> Login </button></a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="cart.html">
+                  <img src="cart.png" alt="cartimage" width="55" height="40">
+                </a>
+              </li>
+          <form class="d-flex flex-nowrap align-items-center">
+              <input class="form-control border-right-0 mr-n1" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-secondary" type="submit"><i class="fa fa-search"></i></button>
+          </form>
+          </ul>
+          
+        <!-- </div>      -->
+    </nav>  
+    </nav>
+    <div style="text-align:center;">
+      <table style="width:100%">
+        <tr>
+          <td>
+            <div class="picholder" id = "pic">
+              <button class="popup" onclick="popup()"><img src="furniture/couch.jpg" height="150px" width"150px"></button><h6>8 Couch Set</h6><p>$1,799.99</p>
+            </div>
+            <div class="popupwindow" id="PopUP">
+              <img src="furniture/couch.jpg" height="150px" width"150px">
+              <br>
+              Quantity: <input type="number" id="quantity">
+              <button class="addtocart">Add to Cart</button><br>
+              <button class="Close" onclick="closepopup()">Close</button>
+            </div>
+
+          </td>
+          <td><div class="picholder"><img src="clothing/sock.jpg" height="150px" width"150px"><h6>7 (seven) socks</h6><p>$4.99</p></div></td>
+          <td><div class="picholder"><img src="furniture/whitetable.jpg" height="150px" width"150px"><h6>Folding Table 20 pack</h6><p>$500.00</p></div></td>
+        </tr>
+        <tr>
+          <td><div class="picholder"><img src="electronics/iphone.jpg" height="150px" width"150px"><h6>5 iPhones</h6><p>$2,999.99</p></div></td>
+          <td><div class="picholder"><img src="electronics/ps5.jpg" height="150px" width"150px"><h6>21 PS5s (Ebay Pack)</h6><p>$16,000.00</p></div></td>
+          <td><div class="picholder"><img src="clothing/levis.jpg" height="150px" width"150px"><h6>7 pack of Levi's Jeans</h6><p>$80.00</p></div></td>
+        </tr>
+        <tr>
+          <td><div class="picholder"><img src="furniture/treelon.jpg" height="150px" width"150px"><h6>69 blankets</h6><p>$4,200.69</p></div></td>
+          <td><div class="picholder"><img src="groceries/straberries.jpg" height="150px" width"150px"><h6>1 billion strawberries (shipping included)</h6><p>$690.00</p></div></td>
+          <td><div class="picholder"><img src="furniture/chair.jpg" height="150px" width"150px"><h6>499 Chairs</h6><p>$23,000.00</p></div></td>
+        </tr>
+      </table>
+    </div>
+    <script>
+      function popup(){
+        var newpopup = document.getElementById("PopUP");
+        var temp = document.getElementById("pic");
+        newpopup.style.display= "block";
+        temp.style.display="none";
+      }
+      function closepopup(){
+        var newclosepopup = document.getElementById("PopUP");
+        var temp1 = document.getElementById("pic");
+        newclosepopup.style.display= "none";
+        temp1.style.display= "block";
+      }
+    </script>
+  </body>
+</html>
